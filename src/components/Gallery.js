@@ -170,9 +170,9 @@ class Gallery extends Component {
 					onSubmit={(e) => this.getPhotos(e)} 
 					loading={loading}
 					show={show} 
-					disabled={loading}
 				/>
-				<SearchInput 
+				<SearchInput
+					show={show} 
 					onChange={(e) => this.handleInput(e)}
 					onSubmit={(e) => this.formSubmit(e)} 
 					onClick={(e) => this.inputSubmit(e)}
