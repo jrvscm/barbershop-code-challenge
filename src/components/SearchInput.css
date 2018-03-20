@@ -1,0 +1,84 @@
+#search-form {
+	display: block;
+	width: 100%;
+}
+
+.search-input {
+	height: 30px;
+	width: 137px;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 5px;
+	margin: 5px 0px;
+	border:none;
+	border-bottom: 2px solid #0070FF;
+	background-color:#FFF;
+	color: #0070FF;
+	transition: all .1s ease;
+}
+
+.search-input:focus,
+.search-input:hover {
+	outline: none;
+}
+
+.search-submit-btn {
+	height: 41px;
+	border-bottom: 2px solid #0070FF;
+	border-radius: 0;
+	display: inline-flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: center;
+	width: auto;
+	position: relative;
+}
+
+.search-submit-btn:hover,
+.search-submit-btn:focus {
+	background-color: transparent;
+	color: #1BB3F5;
+}
+
+.error {
+	color: red;
+	border-bottom: 2px solid red;
+	-webkit-animation:shake .3s linear;
+	-moz-animation:shake .3s linear;
+	-o-animation:shake .3s linear;
+	animation:shake .3s linear;
+}
+
+.error:hover,
+.error:focus {
+	color:red;
+}
+
+/*form animation*/
+@-webkit-keyframes shake {
+  10%, 90% {-webkit-transform: translate3d(-1px, 0, 0);}
+  20%, 80% {-webkit-transform: translate3d(2px, 0, 0);}
+  30%, 50%, 70% {-webkit-transform: translate3d(-4px, 0, 0);}
+  40%, 60% {-webkit-transform: translate3d(4px, 0, 0);}
+}
+
+@-moz-keyframes shake {
+  10%, 90% {-moz-transform: translate3d(-1px, 0, 0);}
+  20%, 80% {-moz-transform: translate3d(2px, 0, 0);}
+  30%, 50%, 70% {-moz-transform: translate3d(-4px, 0, 0);}
+  40%, 60% {-moz-transform: translate3d(4px, 0, 0);}
+}
+
+@-o-keyframes shake {
+  10%, 90% {-o-transform: translate3d(-1px, 0, 0);}
+  20%, 80% {-o-transform: translate3d(2px, 0, 0);}
+  30%, 50%, 70% {-o-transform: translate3d(-4px, 0, 0);}
+  40%, 60% {-o-transform: translate3d(4px, 0, 0);}
+}
+
+@keyframes shake {
+  10%, 90% {transform: translate3d(-1px, 0, 0);}
+  20%, 80% {transform: translate3d(2px, 0, 0);}
+  30%, 50%, 70% {transform: translate3d(-4px, 0, 0);}
+  40%, 60% {transform: translate3d(4px, 0, 0);}
+}

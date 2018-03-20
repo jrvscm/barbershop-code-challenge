@@ -1,0 +1,183 @@
+img {
+	height: 100%;
+	width: 100%;
+	cursor: pointer;
+	z-index: 10;
+}
+
+img:hover,
+img:focus {
+	opacity:.1;
+}
+
+.profile-img {
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+}
+
+.image-li {
+	height: 250px;
+	width: 31%;
+	min-width: 350px;
+	display: inline-flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	margin: 1%;
+	position: relative;
+}
+
+.link-container {
+	overflow-wrap: break-word;
+	text-align: left;
+}
+
+.image-li h2 a {
+	font-size: 32px;
+	text-decoration: none;
+}
+
+.loading-overlay {
+	height: 100%;
+	width: 100%;
+	background-color:#fff;
+	position: absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom: 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	z-index: 50;
+}
+
+.info-overlay {
+	height: 100%;
+	width: 100%;
+	background-color:rgba(0,112,255,.6);
+	position: absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	z-index: -10;
+}
+
+.info-overlay h2 {
+	margin: 5px;
+	font-size: 20px;
+}
+
+.list-view {
+	height: 150px;
+	width: 100%;
+	justify-content: flex-start;
+}
+
+.list-view img, 
+.list-view .info-overlay {
+	width: 15%;
+	margin-right: 2%;
+	transition: all .1s ease;
+}
+
+.image-li.list-view div:nth-child(1) {
+	display:none;
+}
+
+.image-li.list-view img:hover {
+	opacity: .5;
+}
+
+.gallery-container > div {
+	overflow-y: hidden!important;
+}
+
+.modal-container {
+	margin: 3% auto!important;
+}
+
+#modal-content img:nth-child(1) {
+	height: 300px;
+}
+
+#modal-content img:nth-child(2) {
+	margin: 20px 0px;
+}
+
+.location {
+	margin-top: 80px;
+	font-size: 14px;
+}
+
+.location i {
+	color: rgba(0,0,0,.3);
+	font-size: 25px;
+}
+
+.user-name {
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.twitter-handle {
+	margin-top: 5px;
+	font-size: 14px;
+}
+
+.hidden {
+	display: none;
+}
+
+@media only screen and (max-width: 500px) {
+
+	div.link-container { 
+		max-width: 250px;
+	}
+
+	div.link-container h2 a {
+		font-size: 18px;
+	}
+
+	.image-li.list-view {
+		height: 80px;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+
+	.list-view img {
+		height: 50px;
+		width: 70px;
+		padding: 0;
+		margin:5% 3%;
+	}
+
+	.gallery-container div {
+		background-color: #fff!important;
+	}
+
+	.modal-container {
+		max-width: 90%;
+		padding:0!important;
+		margin:5%!important;
+	}
+
+	#modal-content img:nth-child(1) {
+		height: 200px;
+		margin-top: 80px;
+	}
+
+	i.fa.fa-times-thin {
+		margin-right: -15px;
+		margin-top: -25px;
+	}
+}

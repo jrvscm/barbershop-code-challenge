@@ -1,0 +1,46 @@
+nav {
+	padding: 3% 3.3%;
+	font-size: 20px;
+	font-weight: bold;
+	display: flex;
+	flex-direction: row;
+	align-items: center;	
+	justify-content: flex-end;
+}
+
+h1 {
+	display: inline-block;
+	margin-right: auto;
+	font-size: 28px;
+}
+
+.btn {
+	font-size: 15px;
+	font-weight: bold;
+	height: 40px;
+	width: 80px;
+	border-radius: 3px;
+	border: none;
+	background-color:#FFF;
+	color: #0070FF;
+	cursor: pointer;
+	outline: none;
+	transition: all .1s ease;
+}		
+
+.btn:hover, 
+.btn:active, 
+.btn:focus {
+	background-color:#1BB3F5;
+	color: white;
+}
+
+.btn i {
+	margin: 5px;
+	font-size: 14px;
+}
+
+.active {
+	background-color:#0070FF;
+	color: white;
+}
