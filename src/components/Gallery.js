@@ -60,7 +60,7 @@ export class Gallery extends Component {
 		const newImageStatus = JSON.parse(JSON.stringify(imageStatus))
 			newImageStatus[i] = {"index":i, status:"loaded"};
 			this.props.dispatch(setImageStatus(newImageStatus))
-			
+
 		//if all of the images are loaded we set loading to false
 			if(
 					newImageStatus[0].status === "loaded" &&

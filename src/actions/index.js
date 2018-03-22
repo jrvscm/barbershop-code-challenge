@@ -49,7 +49,8 @@ export const setFormError = (status) => ({
 })
 
 export const requestImages = () => (dispatch) => {
-	return fetch(`${UNSPLASH_BASE_URL}/photos/random?count=6&h350=&w=200&orientation=landscape`, {
+	const random = Math.random();
+	return fetch(`${UNSPLASH_BASE_URL}/photos/random?count=6&h350=&w=200&orientation=landscape&sig=${random}`, {
 		method: 'GET',
 		headers: {
 			Authorization: `Client-ID ${UNSPLASH_ACCESS_KEY}`
