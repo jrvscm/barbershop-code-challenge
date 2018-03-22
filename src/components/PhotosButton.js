@@ -11,6 +11,7 @@ class PhotosButton extends Component {
 			show 
 		} = this.props;
 		
+		const btnClasses = loading === true ? "disabled btn active" : 'btn active'; 
 		const tabIndex = show === true ? "-1" : "0";
 		const icon = loading === true ? 
 		<i className='fa fa-refresh fa-spin'></i> 
@@ -20,7 +21,7 @@ class PhotosButton extends Component {
 			<button 
 				tabIndex={tabIndex}
 				id="get-photos-btn" 
-				className={'btn active'} 
+				className={btnClasses} 
 				type="submit"
 				disabled={disabled}
 				onClick={onSubmit}>

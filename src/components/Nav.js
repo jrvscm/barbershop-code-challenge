@@ -4,7 +4,7 @@ import { setGrid } from '../actions';
 import '../reset.css';
 import './Nav.css';
 
-class Nav extends Component {
+export class Nav extends Component {
 
 	setGrid(e) {
 		e.target.id === 'grid-btn' ? this.props.dispatch(setGrid(true)) : this.props.dispatch(setGrid(false));

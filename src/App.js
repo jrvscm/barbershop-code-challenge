@@ -6,7 +6,8 @@ import Gallery from './components/Gallery';
 import './reset.css';
 import './App.css';
 
-class App extends Component {
+export class App extends Component {
+  
   componentDidMount() {
     this.props.dispatch(requestImages())
   }
