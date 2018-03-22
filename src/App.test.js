@@ -1,9 +1,35 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import { shallow, mount } from 'enzyme';
+import { MOCK_DATA } from './config';
+import { setSearchInputValue } from './actions';
+import { App } from './App';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+describe('<App />', () => {
+
+  const { 
+    grid,
+    currentImages,
+    imageStatus,
+    loading,
+    show,
+    modalImage,
+    searchInputValue,
+    formError
+	} = MOCK_DATA;
+
+	it('Should Render without crashing', () => {
+		const dispatch=jest.fn();
+		shallow(
+			<App
+				dispatch={dispatch}
+				grid={grid}
+				currentImages={currentImages}
+				loading={loading}
+				show={show}
+				modalImage={modalImage}
+				setSearchInputValue={setSearchInputValue}
+				formError={formError}
+			/>
+		)
+	})
+})

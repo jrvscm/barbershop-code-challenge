@@ -3,11 +3,11 @@ import { RingLoader } from 'react-spinners';
 import '../reset.css';
 import './GalleryItem.css';
 
-class GalleryItem extends Component {
+export class GalleryItem extends Component {
 
 	render() {
 
-		let { 
+		const { 
 			grid, 
 			imageStatus, 
 			link,
@@ -23,9 +23,9 @@ class GalleryItem extends Component {
 			i 
 		} = this.props;
 
-		let tabIndex = show === true ? "" : "0";
-		let classNames = grid === true ? "image-li" : "image-li list-view";
-		let h2ClassNames = grid === true ? "hidden" : null;
+		const tabIndex = show === true ? "-1" : "0";
+		const classNames = grid === true ? "image-li" : "image-li list-view";
+		const h2ClassNames = grid === true ? "hidden" : null;
 		let overlayDiv;
 			if(imageStatus[i].status === "loading") {
 				overlayDiv = (
@@ -37,7 +37,7 @@ class GalleryItem extends Component {
 			overlayDiv = (
 				<div className={'info-overlay behind'}>
 					<img 
-						className="profile-img" 
+						className="profile-img"
 						src={user.profile_image.medium}
 						alt={`${user.username}'s profile`} 
 					/>

@@ -25,6 +25,11 @@ h1 {
 	color: #0070FF;
 	cursor: pointer;
 	outline: none;
+	display:inline-flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: center;
 	transition: all .1s ease;
 }		
 

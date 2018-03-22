@@ -67,7 +67,7 @@ export const requestImages = () => (dispatch) => {
 		{'index':4, status:'loading'},
 		{'index':5, status:'loading'}
 	];
-
+	
 	dispatch(setLoading(true))
 	dispatch(setImageStatus(nextImageStatus))
 	})

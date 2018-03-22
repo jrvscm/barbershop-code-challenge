@@ -2,3 +2,11 @@
 	width: 150px;
 	margin:1%;
 }
+
+.disabled {
+	background-color: rgba(0,112,255, .3)
+}
+
+.disabled:hover {
+	background-color: rgba(0,112,255, .3)
+}
