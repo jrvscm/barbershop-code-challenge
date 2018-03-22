@@ -314,3 +314,4 @@ describe('<GalleryItem />', () => {
 		expect(callback).toHaveBeenCalled();
 	})
 })
+

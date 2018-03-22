@@ -17,12 +17,12 @@ import SearchInput from './SearchInput';
 import '../reset.css';
 import './Gallery.css';
 
-class Gallery extends Component {
+export class Gallery extends Component {
 
 	onMouseOver(e, i) {
 		//setting up our image for the popup before we send it to the store
 		const modalImage = {
-			'src': this.props.currentImages[i].urls.raw,
+			'src': this.props.currentImages[i].urls.small,
 			'alt': this.props.currentImages[i].description,
 			'name': this.props.currentImages[i].user.name,
 			'twitter_username': this.props.currentImages[i].user.twitter_username,

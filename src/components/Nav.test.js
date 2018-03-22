@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import { MOCK_DATA } from '../config';
 import { Nav } from './Nav';
+import { setGrid, setList } from '../actions';
 
 describe('<Nav />', () => {
 	
@@ -39,5 +40,29 @@ describe('<Nav />', () => {
 		const wrapper = shallow(<Nav show={show} />)
 		expect(wrapper.find('#grid-btn').props().tabIndex).toEqual("0");
 		expect(wrapper.find('#list-btn').props().tabIndex).toEqual("0");
+	})
+
+	it('it should dispatch setGrid when the grid btn is clicked', () => {
+		const dispatch = jest.fn();
+		const wrapper = mount(
+			<Nav 
+				dispatch={dispatch} 
+			/>
+		)
+		wrapper.find('#grid-btn').simulate('click');
+		expect(dispatch).toHaveBeenCalled();
+		expect(dispatch.mock.calls[0][0].type).toEqual('SET_GRID');
+	})
+
+	it('it should dispatch setGrid when the list btn is clicked', () => {
+		const dispatch = jest.fn();
+		const wrapper = mount(
+			<Nav 
+				dispatch={dispatch} 
+			/>
+		)
+		wrapper.find('#list-btn').simulate('click');
+		expect(dispatch).toHaveBeenCalled();
+		expect(dispatch.mock.calls[0][0].type).toEqual('SET_GRID');
 	})
 });
